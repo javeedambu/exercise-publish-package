@@ -37,11 +37,12 @@ jobs:
           node-version: 16
           #registry-url: 'https://registry.npmjs.org/'
           registry-url: https://npm.pkg.github.com/
+
       - run: npm install
 
       - run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
       - run: npm login --registry=https://npm.pkg.github.com --scope=@javeedambu
-        #env:
-        #  NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
 
