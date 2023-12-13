@@ -45,7 +45,6 @@ jobs:
       - run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
       - run: npm publish
         env:
-          NPM_CONFIG_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       
 
