@@ -44,7 +44,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
       - run: npm install
       - run: cat /home/runner/work/_temp/.npmrc
-      - run: echo "${{ secrets.GT_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+      - run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
       #- run: npm login --registry=https://npm.pkg.github.com --scope=@javeedambu
       - run: npm publish
         env:
