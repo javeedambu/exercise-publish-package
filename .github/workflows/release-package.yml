@@ -22,7 +22,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
       - run: npm install
       - run: npm run test
-      - run: cat .npmrc
+      - run: cat /home/runner/work/_temp/.npmrc
       
   publish-gpr:
     needs: build
