@@ -1,5 +1,5 @@
 {
-  "name": "local-action",
+  "name": "@javeedambu/exercise-publish-package",
   "version": "1.0.0",
   "description": "Local exercise action to verify the desire commit was removed",
   "main": "index.js",
