@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-      - run: npm ci
+      - run: npm install
       - run: npm run test
       
   publish-gpr:
@@ -40,7 +40,7 @@ jobs:
         #with:
           #node-version: 16
          # registry-url: https://npm.pkg.github.com/
-      - run: npm ci
+      - run: npm install
 
       - run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
       - run: npm publish
