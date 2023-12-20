@@ -3,9 +3,10 @@
 
 name: Node.js Package
 
-on: push
-  #release:
-  #  types: [created]
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
 
 jobs:
   build:
